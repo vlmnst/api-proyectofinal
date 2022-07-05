@@ -27,7 +27,7 @@ const errorHandler = require('./src/middleware/errorHandler');
     server.use(errorHandler);
 
 // CONECTO EL SERVIDOR
-    // || 3001
-    server.listen('https://api-proyectofinal-pf.herokuapp.com' || 3001, () => {
-        console.log(`. \u2705 server-express listening at`);
+    const PORT = process.env.PORT // || 3001
+    server.listen( PORT, () => {
+        console.log(`. \u2705 server-express listening at ${PORT}`);
     });
